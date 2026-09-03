@@ -11,7 +11,11 @@
     "all:typecheck": "pnpm -r --filter @marginal.credit/* typecheck",
     "all:lint": "pnpm -r --filter @marginal.credit/* lint",
     "all:format": "pnpm -r --filter @marginal.credit/* format",
-    "all:test": "pnpm -r --filter @marginal.credit/* test"
+    "all:test": "pnpm -r --filter @marginal.credit/* test",
+    "platform-backend:dev": "pnpm -r --filter @marginal.credit/platform-backend dev",
+    "platform-frontend:dev": "pnpm -r --filter @marginal.credit/platform-frontend dev",
+    "station-backend:dev": "pnpm -r --filter @marginal.credit/station-backend dev",
+    "station-frontend:dev": "pnpm -r --filter @marginal.credit/station-frontend dev"
   },
   "devDependencies": {
     "@eslint/compat": "^2.0.3",

@@ -28,7 +28,12 @@ export function bootUser(
   const userStore = new MongoUserStore(db).publishAggregateEventsTo(eventBus);
 
   intentBus.register(
-    new ClaimKeyCommandHandler(userStore, keyStore, transactionPerformer),
+    new ClaimKeyCommandHandler(
+      userStore,
+      keyStore,
+      transactionPerformer,
+      dateTimeService,
+    ),
   );
 
   intentBus.register(

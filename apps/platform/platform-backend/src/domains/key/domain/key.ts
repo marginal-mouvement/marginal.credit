@@ -7,12 +7,14 @@ export class Key extends Shape({
   id: KeyId,
   ownerId: Optional(UserId),
   showId: Optional(ShowId),
+  assignedAt: Optional(Date),
 }) {
   static create(showId?: ShowId) {
     return new Key({
       id: KeyId.generate(),
       ownerId: undefined,
       showId: showId,
+      assignedAt: undefined,
     });
   }
 
@@ -20,11 +22,12 @@ export class Key extends Shape({
     return this.ownerId === undefined;
   }
 
-  assign(ownerId: UserId) {
+  assign(ownerId: UserId, at: Date) {
     if (this.ownerId) {
       throw DomainError.conflict("Key already claimed");
     }
 
     this.ownerId = ownerId;
+    this.assignedAt = at;
   }
 }
