@@ -13,9 +13,10 @@ export const SimpleUserSchema = z.object({
   id: z.string(),
   name: UsernameSchema,
   email: z.email(),
-  balance: z.number().positive(),
+  balance: z.number().nonnegative(),
   visitedShows: z.array(z.string()),
   emailConfirmed: z.boolean(),
+  createdAt: z.coerce.date().optional(),
 });
 
 export const TransferIntentSchema = z.object({

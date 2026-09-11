@@ -9,6 +9,7 @@ export class HttpUserSerializer {
       balance: user.balance,
       visitedShows: user.visitedShows.map((show) => show.serialize()),
       emailConfirmed: user.emailConfirmed,
+      createdAt: user.createdAt,
     };
   }
 }

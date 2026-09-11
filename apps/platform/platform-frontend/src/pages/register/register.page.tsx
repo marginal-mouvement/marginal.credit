@@ -1,7 +1,8 @@
 import { useNavigate, useParams } from "react-router";
 import { use, useEffect, useState } from "react";
 
-import { RegisterForm } from "./register.form.tsx";
+import { RegisterProvider, type RegisterData } from "./register.context.tsx";
+import { RegisterSteps } from "./steps/register.steps.tsx";
 
 import { AuthContext } from "../../modules/auth/auth.context.tsx";
 import { platformSDK } from "../../modules/platform/platformSDK.ts";
@@ -20,31 +21,35 @@ export const RegisterPage = () => {
         navigate("/");
         return;
       }
-
       const isAvailable = await platformSDK.key.isAvailable(keyId);
-
       if (!isAvailable) {
-        login(keyId).catch(console.error);
+        await login(keyId);
+        navigate("/");
         return;
       }
-
       setIsLoading(false);
     }
-
-    fetchKeyStatus().catch(() => {
-      navigate("/");
-    });
+    fetchKeyStatus().catch(() => navigate("/"));
   }, [keyId, login, navigate]);
 
-  if (isLoading) {
-    return <FullPageSpinner />;
-  }
+  const handleSubmit = async (data: RegisterData) => {
+    if (!keyId) throw new Error("Missing key ID");
+    await platformSDK.user.claimKey({
+      keyId,
+      ...data,
+      refererName: data.refererName || undefined,
+    });
+    await login(keyId);
+    navigate("/");
+  };
+
+  if (isLoading) return <FullPageSpinner />;
 
   return (
-    <Content>
-      <div className="flex flex-col justify-center h-svh">
-        <RegisterForm keyId={keyId} />
-      </div>
-    </Content>
+    <RegisterProvider key={keyId} onSubmit={handleSubmit}>
+      <Content className="flex min-h-svh flex-col justify-center gap-6 py-8">
+        <RegisterSteps />
+      </Content>
+    </RegisterProvider>
   );
 };

@@ -1,5 +1,5 @@
 import { use, useEffect } from "react";
-import { Minus, Plus } from "lucide-react";
+import { CircleSlash, Minus, Plus } from "lucide-react";
 import { Spinner } from "@marginal.credit/ui/spinner.tsx";
 import {
   Item,
@@ -43,7 +43,10 @@ export const TransactionsPage = () => {
               <Item key={transaction.id} variant="outline">
                 <ItemMedia>
                   <Avatar size="lg">
-                    <AvatarImage src={transaction.thumbnailUrl} />
+                    <AvatarImage
+                      src={transaction.thumbnailUrl}
+                      alt={transaction.label}
+                    />
                     <AvatarFallback>
                       {transaction.label.substring(0, 2)}
                     </AvatarFallback>
@@ -69,7 +72,9 @@ export const TransactionsPage = () => {
             ))}
           </div>
         ) : (
-          <div>Aucune transaction</div>
+          <div className="flex items-center justify-center gap-2 text-muted-foreground">
+            <CircleSlash /> Aucune transaction
+          </div>
         )}
       </Content>
     </>

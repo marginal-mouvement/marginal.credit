@@ -24,12 +24,10 @@ export const AuthContext = createContext<AuthContextValue>(null!);
 
 export const AuthContextProvider = ({ children }: PropsWithChildren) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState<SimpleUser | undefined>(undefined);
 
   const logout = useCallback(() => {
     setUser(undefined);
-    setIsAuthenticated(false);
     setIsLoading(false);
     platformSDK.logout();
     KeyStore.erase();
@@ -52,9 +50,9 @@ export const AuthContextProvider = ({ children }: PropsWithChildren) => {
       try {
         const user = await platformSDK.user.me();
         setUser(user);
-        setIsAuthenticated(true);
         setIsLoading(false);
-      } catch {
+      } catch (e) {
+        console.log(e);
         setIsLoading(false);
         logout();
       }
@@ -70,12 +68,12 @@ export const AuthContextProvider = ({ children }: PropsWithChildren) => {
   const value = useMemo(
     () => ({
       isLoading,
-      isAuthenticated,
+      isAuthenticated: !!user,
       user,
       login: authenticate,
       logout,
     }),
-    [isLoading, isAuthenticated, user, authenticate, logout],
+    [isLoading, user, authenticate, logout],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

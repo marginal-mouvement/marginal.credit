@@ -15,6 +15,7 @@ export class MongoUserSerializer implements ISerializer<User> {
       balance: value.balance,
       visitedShows: value.visitedShows.map((show) => show.serialize()),
       emailConfirmed: value.emailConfirmed,
+      createdAt: value.createdAt,
     };
   }
 
@@ -28,6 +29,7 @@ export class MongoUserSerializer implements ISerializer<User> {
         ShowId.deserialize(showId),
       ),
       emailConfirmed: value.emailConfirmed,
+      createdAt: value.createdAt,
     });
   }
 }
