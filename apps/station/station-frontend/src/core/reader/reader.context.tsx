@@ -7,11 +7,12 @@ import {
   useReducer,
   useRef,
 } from "react";
-import { ReaderApi } from "@marginal-card/station-sdk";
+import { ReaderApi } from "@marginal.credit/station-sdk";
 
-import { stationSDK } from "@/core/sdk/stationSDK.ts";
-import type { Reader, ReaderAction, ReaderDict } from "@/core/reader/types.ts";
-import { Readers } from "@/core/reader/readers.ts";
+import type { Reader, ReaderAction, ReaderDict } from "./types.ts";
+import { Readers } from "./readers.ts";
+
+import { stationSDK } from "../sdk/stationSDK.ts";
 
 interface ReaderContextValue {
   readerDict: Record<string, Reader>;

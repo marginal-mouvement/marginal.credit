@@ -1,5 +1,8 @@
-import type { DatetimeService, KeyId } from "@marginal-card/backend-framework";
-import { ApplicationError, UserId } from "@marginal-card/backend-framework";
+import type {
+  DatetimeService,
+  KeyId,
+} from "@marginal.credit/backend-framework";
+import { ApplicationError, UserId } from "@marginal.credit/backend-framework";
 
 import type { RequestContext } from "./requestContext";
 import type { SessionStore } from "./session.store";

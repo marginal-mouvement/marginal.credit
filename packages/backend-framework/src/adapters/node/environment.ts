@@ -1,6 +1,9 @@
+import { findUpSync } from "find-up";
 import { config } from "dotenv";
 
-config();
+config({
+  path: findUpSync(".env"),
+});
 
 export class Environment {
   static get(key: string) {

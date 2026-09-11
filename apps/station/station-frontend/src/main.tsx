@@ -1,12 +1,12 @@
-import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
+import { createRoot } from "react-dom/client";
+import { ThemeProvider } from "@marginal.credit/ui/theme-provider.tsx";
+import { Toaster } from "@marginal.credit/ui/sonner.tsx";
+
 import "./index.css";
 
 import App from "./App.tsx";
-
-import { ThemeProvider } from "@/components/theme-provider.tsx";
-import { ReaderContextProvider } from "@/core/reader/reader.context.tsx";
-import { Toaster } from "@/components/ui/sonner.tsx";
+import { ReaderContextProvider } from "./core/reader/reader.context.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>

@@ -25,8 +25,6 @@ export class MongoStore<T extends IIdentifiable> implements Store<T> {
       .sort({ ...(sort ?? {}) })
       .toArray();
 
-    console.log(docs);
-
     return docs.map(this.serializer.deserialize);
   }
 

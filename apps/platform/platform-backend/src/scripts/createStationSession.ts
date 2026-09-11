@@ -1,7 +1,6 @@
-import { Environment, UserId } from "@marginal-card/backend-framework";
+import { Environment, UserId } from "@marginal.credit/backend-framework";
 import { AlgorithmTypes } from "hono/jwt";
-
-import { execute } from "./execute";
+import { execute } from "@marginal.credit/tools";
 
 import { MongoSessionStore } from "../domains/auth/infra/mongo.session.store";
 import { db } from "../infra/db";

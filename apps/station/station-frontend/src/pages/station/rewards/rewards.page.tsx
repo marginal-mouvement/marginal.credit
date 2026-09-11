@@ -1,4 +1,4 @@
-import { Page } from "@/parts/page.tsx";
+import { Page } from "../../../parts/page.tsx";
 
 export const RewardsPage = () => {
   return (

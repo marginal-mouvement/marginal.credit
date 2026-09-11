@@ -2,21 +2,21 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { config } from "dotenv";
+import { findUpSync } from "find-up";
 
-import path from "path";
+const envPath = findUpSync(".env");
 
-config();
+config({
+  path: envPath,
+});
 
-const outDir = process.env.VITE_OUT_DIR ?? "../../backend/public/frontend";
+const outDir =
+  process.env.PLATFORM_FRONT_BUILD_DEST ?? "../../backend/public/frontend";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
+  envDir: "../../../",
   build: {
     outDir,
     rollupOptions: {

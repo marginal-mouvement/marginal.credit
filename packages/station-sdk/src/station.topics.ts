@@ -1,5 +1,5 @@
-import type { Topics } from "@marginal-card/sdk";
-import { Snapshots } from "@marginal-card/sdk";
+import type { Topics } from "@marginal.credit/sdk";
+import { Snapshots } from "@marginal.credit/sdk";
 import type { z } from "zod";
 
 import {

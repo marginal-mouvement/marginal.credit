@@ -1,25 +1,29 @@
 import { type ReactNode, use, useCallback, useEffect, useState } from "react";
 import { CircleCheck, CircleSlash, Plus, RotateCcw } from "lucide-react";
-import { ReaderApi } from "@marginal-card/station-sdk";
-
-import { Spinner } from "@/components/ui/spinner.tsx";
-import { useReader } from "@/core/reader/useReader.ts";
-import { stationSDK } from "@/core/sdk/stationSDK.ts";
-import { platformSDK } from "@/core/platform/platformSDK.ts";
-import { PulseRingIcon } from "@/components/icons/svg-spinners-pulse-ring.tsx";
-import { ReaderStatus } from "@/pages/readers/components/readerStatus.tsx";
-import { Button } from "@/components/ui/button.tsx";
-import { CreateShowDialog } from "@/core/show/createShow.dialog.tsx";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group.tsx";
+import { ReaderApi } from "@marginal.credit/station-sdk";
+import { PulseRingIcon } from "@marginal.credit/ui/svg-spinners-pulse-ring.tsx";
+import { Spinner } from "@marginal.credit/ui/spinner.tsx";
+import { Button } from "@marginal.credit/ui/button.tsx";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@marginal.credit/ui/radio-group.tsx";
 import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
   FieldTitle,
-} from "@/components/ui/field.tsx";
-import { Kbd } from "@/components/ui/kbd.tsx";
-import { ShowContext } from "@/core/show/show.context.tsx";
+} from "@marginal.credit/ui/field.tsx";
+import { Kbd } from "@marginal.credit/ui/kbd.tsx";
+
+import { ReaderStatus } from "./readerStatus.tsx";
+
+import { useReader } from "../../../core/reader/useReader.ts";
+import { ShowContext } from "../../../core/show/show.context.tsx";
+import { platformSDK } from "../../../core/platform/platformSDK.ts";
+import { stationSDK } from "../../../core/sdk/stationSDK.ts";
+import { CreateShowDialog } from "../../../core/show/createShow.dialog.tsx";
 
 interface ReaderWriteProps {
   readerId: string;

@@ -1,12 +1,11 @@
-import type { SimpleUser } from "@marginal-card/platform-sdk";
-
+import type { SimpleUser } from "@marginal.credit/platform-sdk";
 import {
   Item,
   ItemActions,
   ItemContent,
   ItemDescription,
   ItemTitle,
-} from "@/components/ui/item.tsx";
+} from "@marginal.credit/ui/item.tsx";
 
 interface UserCardProps {
   user: SimpleUser;

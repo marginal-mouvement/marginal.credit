@@ -1,5 +1,5 @@
 import type { Reader } from "@tockawa/nfc-pcsc";
-import { InfrastructureError } from "@marginal-card/backend-framework";
+import { InfrastructureError } from "@marginal.credit/backend-framework";
 
 import { Buffer } from "node:buffer";
 

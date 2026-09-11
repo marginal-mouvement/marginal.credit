@@ -1,12 +1,12 @@
 import type {
   KeyId,
   TransactionPerformer,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 import {
   ApplicationError,
   Command,
   CommandHandler,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 
 import type { Actor } from "../../../auth/domain/actor";
 import { Key } from "../../domain/key";

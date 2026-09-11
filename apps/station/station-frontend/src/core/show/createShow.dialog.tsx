@@ -1,9 +1,8 @@
 import { type ReactNode, useCallback, useState } from "react";
 import { Plus } from "lucide-react";
 import { toast } from "sonner";
-import type { ShowApi } from "@marginal-card/platform-sdk";
-import type { PayloadOf } from "@marginal-card/sdk";
-
+import type { ShowApi } from "@marginal.credit/platform-sdk";
+import type { PayloadOf } from "@marginal.credit/sdk";
 import {
   Dialog,
   DialogContent,
@@ -12,13 +11,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog.tsx";
-import { Field, FieldLabel } from "@/components/ui/field.tsx";
-import { Input } from "@/components/ui/input.tsx";
-import { DatePicker } from "@/components/ui/datePicker.tsx";
-import { Button } from "@/components/ui/button.tsx";
-import { AspectRatio } from "@/components/ui/aspect-ratio.tsx";
-import { Spinner } from "@/components/ui/spinner.tsx";
+} from "@marginal.credit/ui/dialog.tsx";
+import { AspectRatio } from "@marginal.credit/ui/aspect-ratio.tsx";
+import { Field, FieldLabel } from "@marginal.credit/ui/field.tsx";
+import { Input } from "@marginal.credit/ui/input.tsx";
+import { Button } from "@marginal.credit/ui/button.tsx";
+import { Spinner } from "@marginal.credit/ui/spinner.tsx";
+import { DatePicker } from "@marginal.credit/ui/datePicker.tsx";
 
 interface CreateShowDialogProps {
   children: ReactNode;

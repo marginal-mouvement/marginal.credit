@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router";
 
-import { RegisterPage } from "@/pages/register/register.page.tsx";
-import { LandingPage } from "@/pages/landing/landing.page.tsx";
+import { LandingPage } from "../pages/landing/landing.page.tsx";
+import { RegisterPage } from "../pages/register/register.page.tsx";
 
 export const UnauthenticatedContainer = () => {
   return (

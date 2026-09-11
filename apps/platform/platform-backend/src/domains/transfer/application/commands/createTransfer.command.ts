@@ -1,5 +1,5 @@
-import type { UserId } from "@marginal-card/backend-framework";
-import { Command, CommandHandler } from "@marginal-card/backend-framework";
+import type { UserId } from "@marginal.credit/backend-framework";
+import { Command, CommandHandler } from "@marginal.credit/backend-framework";
 
 import { Transfer } from "../../domain/transfer";
 import type { Actor } from "../../../auth/domain/actor";

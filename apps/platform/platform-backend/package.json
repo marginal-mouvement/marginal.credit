@@ -1,26 +1,27 @@
 {
-  "name": "@marginal-card/platform-backend",
+  "name": "@marginal.credit/platform-backend",
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
     "dev": "nodemon src/server.ts",
     "station:create-session": "ts-node src/scripts/createStationSession.ts",
     "build:esbuild": "ts-node src/scripts/build/esbuild.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier . --check"
   },
   "dependencies": {
-    "@ddd-ts/core": "^0.0.35",
-    "@ddd-ts/shape": "^0.0.35",
-    "@hono/node-server": "1.19.13",
-    "@marginal-card/backend-framework": "workspace:*",
-    "@marginal-card/platform-sdk": "workspace:*",
-    "hono": "4.12.18",
-    "mongodb": "^7.1.0",
+    "@ddd-ts/core": "catalog:",
+    "@ddd-ts/shape": "catalog:",
+    "@hono/node-server": "catalog:",
+    "@marginal.credit/backend-framework": "workspace:*",
+    "@marginal.credit/platform-sdk": "workspace:*",
+    "hono": "catalog:",
+    "mongodb": "catalog:",
     "nodemon": "^3.1.14",
-    "zod": "^4.3.6"
+    "zod": "catalog:"
   },
   "devDependencies": {
-    "@ddd-ts/store-inmemory": "^0.0.36",
-    "esbuild": "^0.27.3"
+    "@ddd-ts/store-inmemory": "^0.0.36"
   }
 }

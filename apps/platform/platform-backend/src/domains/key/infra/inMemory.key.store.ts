@@ -1,4 +1,4 @@
-import type { InMemoryDatabase} from "@ddd-ts/store-inmemory";
+import type { InMemoryDatabase } from "@ddd-ts/store-inmemory";
 import { InMemoryStore } from "@ddd-ts/store-inmemory";
 
 import { MongoKeySerializer } from "./mongo.key.serializer";

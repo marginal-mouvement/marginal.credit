@@ -1,5 +1,5 @@
 import type { ISerializer } from "@ddd-ts/core";
-import { UserId } from "@marginal-card/backend-framework";
+import { UserId } from "@marginal.credit/backend-framework";
 
 import { User } from "../domain/user";
 import { Email } from "../domain/email";
@@ -15,6 +15,7 @@ export class MongoUserSerializer implements ISerializer<User> {
       balance: value.balance,
       visitedShows: value.visitedShows.map((show) => show.serialize()),
       emailConfirmed: value.emailConfirmed,
+      createdAt: value.createdAt,
     };
   }
 
@@ -28,6 +29,7 @@ export class MongoUserSerializer implements ISerializer<User> {
         ShowId.deserialize(showId),
       ),
       emailConfirmed: value.emailConfirmed,
+      createdAt: value.createdAt,
     });
   }
 }

@@ -1,4 +1,4 @@
-import type { SimpleUser } from "@marginal-card/platform-sdk";
+import type { SimpleUser } from "@marginal.credit/platform-sdk";
 import {
   createContext,
   type PropsWithChildren,
@@ -8,8 +8,8 @@ import {
   useState,
 } from "react";
 
-import { KeyStore } from "@/modules/key/key.store.ts";
-import { platformSDK } from "@/modules/platform/platformSDK.ts";
+import { platformSDK } from "../platform/platformSDK.ts";
+import { KeyStore } from "../key/key.store.ts";
 
 interface AuthContextValue {
   isLoading: boolean;
@@ -24,12 +24,10 @@ export const AuthContext = createContext<AuthContextValue>(null!);
 
 export const AuthContextProvider = ({ children }: PropsWithChildren) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState<SimpleUser | undefined>(undefined);
 
   const logout = useCallback(() => {
     setUser(undefined);
-    setIsAuthenticated(false);
     setIsLoading(false);
     platformSDK.logout();
     KeyStore.erase();
@@ -42,7 +40,9 @@ export const AuthContextProvider = ({ children }: PropsWithChildren) => {
         KeyStore.save(keyId);
       }
 
-      if (!platformSDK.seemsAuthenticated()) {
+      const seemsAuth = platformSDK.seemsAuthenticated();
+
+      if (!seemsAuth) {
         logout();
         return;
       }
@@ -50,9 +50,9 @@ export const AuthContextProvider = ({ children }: PropsWithChildren) => {
       try {
         const user = await platformSDK.user.me();
         setUser(user);
-        setIsAuthenticated(true);
         setIsLoading(false);
-      } catch {
+      } catch (e) {
+        console.log(e);
         setIsLoading(false);
         logout();
       }
@@ -68,12 +68,12 @@ export const AuthContextProvider = ({ children }: PropsWithChildren) => {
   const value = useMemo(
     () => ({
       isLoading,
-      isAuthenticated,
+      isAuthenticated: !!user,
       user,
       login: authenticate,
       logout,
     }),
-    [isLoading, isAuthenticated, user, authenticate, logout],
+    [isLoading, user, authenticate, logout],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

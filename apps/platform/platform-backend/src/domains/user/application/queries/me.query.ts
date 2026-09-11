@@ -2,7 +2,7 @@ import {
   ApplicationError,
   Query,
   QueryHandler,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 
 import { User } from "../../domain/user";
 import type { Actor } from "../../../auth/domain/actor";

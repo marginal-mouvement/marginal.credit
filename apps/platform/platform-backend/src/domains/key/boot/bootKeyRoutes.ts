@@ -2,8 +2,8 @@ import {
   type HonoRouter,
   type InMemoryIntentBus,
   KeyId,
-} from "@marginal-card/backend-framework";
-import { KeyApi } from "@marginal-card/platform-sdk";
+} from "@marginal.credit/backend-framework";
+import { KeyApi } from "@marginal.credit/platform-sdk";
 
 import type { Actor } from "../../auth/domain/actor";
 import { CreateKeyCommand } from "../application/commands/createKey.command";

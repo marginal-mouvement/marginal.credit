@@ -3,7 +3,7 @@ import {
   InMemoryIntentBus,
   MongoTransactionPerformer,
   NodeDatetimeService,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 
 import { db } from "../infra/db";
 import { bootUser } from "../domains/user/boot/bootUser";

@@ -1,4 +1,4 @@
-import type { Store } from "@marginal-card/backend-framework";
+import type { Store } from "@marginal.credit/backend-framework";
 
 import type { Show } from "../domain/show";
 

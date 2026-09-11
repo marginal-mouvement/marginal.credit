@@ -1,11 +1,12 @@
 import { Eye, PencilLine } from "lucide-react";
 import { useState } from "react";
+import { Tabs, TabsList, TabsTrigger } from "@marginal.credit/ui/tabs.tsx";
 
-import { Page } from "@/parts/page.tsx";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs.tsx";
-import { useReader } from "@/core/reader/useReader.ts";
-import { ReaderRead } from "@/pages/readers/components/readerRead.tsx";
-import { ReaderWrite } from "@/pages/readers/components/readerWrite.tsx";
+import { ReaderRead } from "./components/readerRead.tsx";
+import { ReaderWrite } from "./components/readerWrite.tsx";
+
+import { Page } from "../../parts/page.tsx";
+import { useReader } from "../../core/reader/useReader.ts";
 
 interface ReaderPageProps {
   readerId: string;

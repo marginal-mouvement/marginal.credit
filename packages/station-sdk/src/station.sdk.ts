@@ -1,4 +1,4 @@
-import { SDK } from "@marginal-card/sdk";
+import { SDK } from "@marginal.credit/sdk";
 
 import type { AnyStationSnapshot } from "./station.topics";
 import { AnyStationSnapshotSchema } from "./station.topics";

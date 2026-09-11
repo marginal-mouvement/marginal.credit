@@ -1,4 +1,4 @@
-import type { InMemoryIntentBus } from "@marginal-card/backend-framework";
+import type { InMemoryIntentBus } from "@marginal.credit/backend-framework";
 import type { Db } from "mongodb";
 
 import { MongoShowStore } from "../infra/mongo.show.store";

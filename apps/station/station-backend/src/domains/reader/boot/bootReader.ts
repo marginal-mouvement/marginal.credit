@@ -1,9 +1,9 @@
 import type {
   NodeDatetimeService,
   SubscriptionRegistry,
-} from "@marginal-card/backend-framework";
-import { Environment } from "@marginal-card/backend-framework";
-import type { StationTopics } from "@marginal-card/station-sdk";
+} from "@marginal.credit/backend-framework";
+import { Environment } from "@marginal.credit/backend-framework";
+import type { StationTopics } from "@marginal.credit/station-sdk";
 import PCSC from "@tockawa/nfc-pcsc";
 
 import { ReaderManager } from "../infra/readerManager";

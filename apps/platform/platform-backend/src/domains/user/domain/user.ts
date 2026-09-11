@@ -1,5 +1,5 @@
 import { EsAggregate, EsEvent, On } from "@ddd-ts/core";
-import { DomainError, UserId } from "@marginal-card/backend-framework";
+import { DomainError, UserId } from "@marginal.credit/backend-framework";
 import { Multiple, Optional } from "@ddd-ts/shape";
 
 import { Email } from "./email";
@@ -13,6 +13,7 @@ export class UserCreated extends EsEvent("UserCreated", {
   referrerId: Optional(UserId),
   referrerName: Optional(String),
   duringShow: Optional(ShowId),
+  at: Date,
 }) {}
 
 export class UserBalanceDebited extends EsEvent("UserDebited", {
@@ -44,6 +45,7 @@ export class User extends EsAggregate("User", {
     balance: Number,
     visitedShows: Multiple(ShowId),
     emailConfirmed: Boolean,
+    createdAt: Optional(Date),
   },
 }) {
   static create({
@@ -52,12 +54,14 @@ export class User extends EsAggregate("User", {
     referrerId,
     duringShow,
     referrerName,
+    at,
   }: {
     name: string;
     email: Email;
     referrerId?: UserId;
     referrerName?: string;
     duringShow?: ShowId;
+    at: Date;
   }) {
     return this.new(
       UserCreated.new({
@@ -67,6 +71,7 @@ export class User extends EsAggregate("User", {
         referrerId,
         referrerName,
         duringShow,
+        at,
       }),
     );
   }
@@ -81,6 +86,7 @@ export class User extends EsAggregate("User", {
       visitedShows: duringShow ? [duringShow] : [],
       emailConfirmed: false,
       balance: 0,
+      createdAt: event.payload.at,
     });
   }
 

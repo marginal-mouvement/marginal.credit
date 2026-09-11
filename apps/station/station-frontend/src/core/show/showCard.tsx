@@ -1,16 +1,16 @@
-import type { SimpleShow } from "@marginal-card/platform-sdk";
+import type { SimpleShow } from "@marginal.credit/platform-sdk";
 import { Calendar, Ellipsis, Gift } from "lucide-react";
-
 import {
   Card,
   CardAction,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card.tsx";
-import { Badge } from "@/components/ui/badge.tsx";
-import { DateFormatter } from "@/lib/utils.ts";
-import { Button } from "@/components/ui/button.tsx";
+} from "@marginal.credit/ui/card.tsx";
+import { Button } from "@marginal.credit/ui/button.tsx";
+import { Badge } from "@marginal.credit/ui/badge.tsx";
+
+import { DateFormatter } from "../../lib/dateFormatter.ts";
 
 interface ShowCardProps {
   show: SimpleShow;

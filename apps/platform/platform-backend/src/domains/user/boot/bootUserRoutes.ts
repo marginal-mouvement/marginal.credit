@@ -3,8 +3,8 @@ import {
   type InMemoryIntentBus,
   KeyId,
   UserId,
-} from "@marginal-card/backend-framework";
-import { UserApi } from "@marginal-card/platform-sdk";
+} from "@marginal.credit/backend-framework";
+import { UserApi } from "@marginal.credit/platform-sdk";
 
 import type { Actor } from "../../auth/domain/actor";
 import { UserByKeyQuery } from "../application/queries/userByKey.query";

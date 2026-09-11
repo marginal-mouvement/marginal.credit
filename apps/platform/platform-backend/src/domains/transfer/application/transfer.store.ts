@@ -1,4 +1,4 @@
-import type { Store, UserId } from "@marginal-card/backend-framework";
+import type { Store, UserId } from "@marginal.credit/backend-framework";
 
 import type { Transfer } from "../domain/transfer";
 

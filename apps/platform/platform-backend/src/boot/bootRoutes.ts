@@ -1,7 +1,7 @@
 import {
   HonoRouter,
   type InMemoryIntentBus,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 import type { Context } from "hono";
 import { Hono } from "hono";
 

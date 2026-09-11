@@ -1,5 +1,5 @@
 import { Choice, Optional, Shape } from "@ddd-ts/shape";
-import { UserId } from "@marginal-card/backend-framework";
+import { UserId } from "@marginal.credit/backend-framework";
 
 import { TransferId } from "./transferId";
 

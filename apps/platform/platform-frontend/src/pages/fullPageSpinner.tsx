@@ -1,4 +1,4 @@
-import { Spinner } from "@/components/ui/spinner.tsx";
+import { Spinner } from "@marginal.credit/ui/spinner.tsx";
 
 export const FullPageSpinner = () => {
   return (

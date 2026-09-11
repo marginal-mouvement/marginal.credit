@@ -5,10 +5,10 @@ import {
   useMemo,
   useState,
 } from "react";
-import { ShowApi, type SimpleShow } from "@marginal-card/platform-sdk";
-import type { PayloadOf } from "@marginal-card/sdk";
+import { ShowApi, type SimpleShow } from "@marginal.credit/platform-sdk";
+import type { PayloadOf } from "@marginal.credit/sdk";
 
-import { platformSDK } from "@/core/platform/platformSDK.ts";
+import { platformSDK } from "../platform/platformSDK.ts";
 
 interface ShowContext {
   shows: SimpleShow[];

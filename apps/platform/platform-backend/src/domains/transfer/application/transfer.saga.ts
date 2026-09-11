@@ -1,5 +1,5 @@
-import type { IntentBus } from "@marginal-card/backend-framework";
-import { Saga } from "@marginal-card/backend-framework";
+import type { IntentBus } from "@marginal.credit/backend-framework";
+import { Saga } from "@marginal.credit/backend-framework";
 
 import { CreateTransferCommand } from "./commands/createTransfer.command";
 

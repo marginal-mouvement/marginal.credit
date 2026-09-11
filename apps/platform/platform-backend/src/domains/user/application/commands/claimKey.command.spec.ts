@@ -2,7 +2,7 @@
 //   InMemoryDatabase,
 //   InMemoryTransactionPerformer,
 // } from "@ddd-ts/store-inmemory";
-// import { ApplicationError, KeyId } from "@marginal-card/backend-framework";
+// import { ApplicationError, KeyId } from "@marginal.credit/backend-framework";
 //
 // import { ClaimKeyCommand, ClaimKeyCommandHandler } from "./claimKey.command";
 //

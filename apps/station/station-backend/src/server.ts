@@ -5,7 +5,7 @@ import {
   Environment,
   handleError,
   Logger,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 import { serveStatic } from "@hono/node-server/serve-static";
 
 import { HELLO } from "./hello";

@@ -2,7 +2,7 @@ import type { Db } from "mongodb";
 import type {
   InMemoryEventBus,
   InMemoryIntentBus,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 
 import { MongoTransferStore } from "../infra/mongo.transfer.store";
 import { CreateTransferCommandHandler } from "../application/commands/createTransfer.command";

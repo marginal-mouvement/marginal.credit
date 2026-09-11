@@ -1,4 +1,4 @@
-import type { Topics } from "@marginal-card/sdk";
+import type { Topics } from "@marginal.credit/sdk";
 
 import type { SubscriptionId } from "../value";
 import { parallel } from "../concurrency";

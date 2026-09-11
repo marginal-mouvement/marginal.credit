@@ -2,8 +2,8 @@ import {
   InMemoryIntentBus,
   NodeDatetimeService,
   SubscriptionRegistry,
-} from "@marginal-card/backend-framework";
-import type { StationTopics } from "@marginal-card/station-sdk";
+} from "@marginal.credit/backend-framework";
+import type { StationTopics } from "@marginal.credit/station-sdk";
 
 import { bootReader } from "../domains/reader/boot/bootReader";
 import { bootSubscription } from "../domains/subscription/boot/bootSubscription";

@@ -1,4 +1,4 @@
-import { UserId } from "@marginal-card/backend-framework";
+import { UserId } from "@marginal.credit/backend-framework";
 
 import { Permission } from "./permission";
 

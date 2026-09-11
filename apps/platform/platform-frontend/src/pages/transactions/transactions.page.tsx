@@ -1,10 +1,6 @@
 import { use, useEffect } from "react";
-import { Minus, Plus } from "lucide-react";
-
-import { Header } from "@/parts/header.tsx";
-import { Content } from "@/parts/content.tsx";
-import { TransferContext } from "@/modules/transfer/transfer.context.tsx";
-import { Spinner } from "@/components/ui/spinner.tsx";
+import { CircleSlash, Minus, Plus } from "lucide-react";
+import { Spinner } from "@marginal.credit/ui/spinner.tsx";
 import {
   Item,
   ItemActions,
@@ -12,14 +8,18 @@ import {
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/components/ui/item.tsx";
+} from "@marginal.credit/ui/item.tsx";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/components/ui/avatar.tsx";
-import { DateFormatter } from "@/lib/utils.ts";
-import { Badge } from "@/components/ui/badge.tsx";
+} from "@marginal.credit/ui/avatar.tsx";
+import { Badge } from "@marginal.credit/ui/badge.tsx";
+
+import { Content } from "../../parts/content.tsx";
+import { TransferContext } from "../../modules/transfer/transfer.context.tsx";
+import { Header } from "../../parts/header.tsx";
+import { DateFormatter } from "../../lib/dateFormatter.ts";
 
 export const TransactionsPage = () => {
   const { loadMyTransfers, transfers, areTransfersLoading } =
@@ -43,7 +43,10 @@ export const TransactionsPage = () => {
               <Item key={transaction.id} variant="outline">
                 <ItemMedia>
                   <Avatar size="lg">
-                    <AvatarImage src={transaction.thumbnailUrl} />
+                    <AvatarImage
+                      src={transaction.thumbnailUrl}
+                      alt={transaction.label}
+                    />
                     <AvatarFallback>
                       {transaction.label.substring(0, 2)}
                     </AvatarFallback>
@@ -69,7 +72,9 @@ export const TransactionsPage = () => {
             ))}
           </div>
         ) : (
-          <div>Aucune transaction</div>
+          <div className="flex items-center justify-center gap-2 text-muted-foreground">
+            <CircleSlash /> Aucune transaction
+          </div>
         )}
       </Content>
     </>

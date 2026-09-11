@@ -1,9 +1,9 @@
-import type { KeyId } from "@marginal-card/backend-framework";
+import type { KeyId } from "@marginal.credit/backend-framework";
 import {
   ApplicationError,
   QueryHandler,
   Query,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 
 import type { KeyStore } from "../key.store";
 import { Key } from "../../domain/key";

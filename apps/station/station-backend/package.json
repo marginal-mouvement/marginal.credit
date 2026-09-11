@@ -1,21 +1,22 @@
 {
-  "name": "@marginal-card/station-backend",
+  "name": "@marginal.credit/station-backend",
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
     "dev": "nodemon src/server.ts",
-    "build:esbuild": "ts-node src/scripts/build/esbuild.ts",
-    "typecheck": "tsc --noEmit"
+    "build:esbuild": "ts-node src/scripts/build/esbuild-.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier . --check"
   },
   "dependencies": {
-    "@hono/node-server": "^1.19.11",
-    "@marginal-card/backend-framework": "workspace:*",
+    "@hono/node-server": "catalog:",
+    "@marginal.credit/backend-framework": "workspace:*",
     "@tockawa/nfc-pcsc": "^0.9.3",
-    "hono": "^4.12.5",
+    "hono": "catalog:",
     "nodemon": "^3.1.14"
   },
   "devDependencies": {
-    "@marginal-card/station-sdk": "workspace:*",
-    "esbuild": "^0.27.3"
+    "@marginal.credit/station-sdk": "workspace:*"
   }
 }

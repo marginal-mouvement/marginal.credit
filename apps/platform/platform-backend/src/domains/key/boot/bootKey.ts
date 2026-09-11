@@ -2,7 +2,7 @@ import type { Db } from "mongodb";
 import type {
   InMemoryIntentBus,
   MongoTransactionPerformer,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 
 import { MongoKeyStore } from "../infra/mongo.key.store";
 import { CreateKeyCommandHandler } from "../application/commands/createKey.command";

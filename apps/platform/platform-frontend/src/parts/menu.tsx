@@ -1,7 +1,6 @@
 import { ArrowLeftRight, Key, User } from "lucide-react";
 import { Link, useLocation } from "react-router";
-
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs.tsx";
+import { Tabs, TabsList, TabsTrigger } from "@marginal.credit/ui/tabs.tsx";
 
 export const Menu = () => {
   const location = useLocation();

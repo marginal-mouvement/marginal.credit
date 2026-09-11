@@ -4,8 +4,8 @@ import {
   CommandHandler,
   Command,
   UserId,
-} from "@marginal-card/backend-framework";
-import type { StationTopics } from "@marginal-card/station-sdk";
+} from "@marginal.credit/backend-framework";
+import type { StationTopics } from "@marginal.credit/station-sdk";
 
 export class CreateSubscriptionCommand extends Command<{
   subscriptionId: SubscriptionId;

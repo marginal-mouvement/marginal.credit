@@ -1,13 +1,13 @@
 import { Save, SquarePen } from "lucide-react";
 import { useCallback, useState } from "react";
+import { Field, FieldLabel } from "@marginal.credit/ui/field.tsx";
+import { ButtonGroup } from "@marginal.credit/ui/button-group.tsx";
+import { Input } from "@marginal.credit/ui/input.tsx";
+import { Button } from "@marginal.credit/ui/button.tsx";
 
-import { Field, FieldLabel } from "@/components/ui/field.tsx";
-import { Input } from "@/components/ui/input.tsx";
-import { Button } from "@/components/ui/button.tsx";
-import { ButtonGroup } from "@/components/ui/button-group.tsx";
-import { Page } from "@/parts/page.tsx";
-import { PlatformApiKeyStore } from "@/core/platform/platformApiKey.store.ts";
-import { platformSDK } from "@/core/platform/platformSDK.ts";
+import { platformSDK } from "../../core/platform/platformSDK.ts";
+import { Page } from "../../parts/page.tsx";
+import { PlatformApiKeyStore } from "../../core/platform/platformApiKey.store.ts";
 
 export const SettingsPage = () => {
   const [apiKey, setApiKey] = useState(PlatformApiKeyStore.load() ?? "");

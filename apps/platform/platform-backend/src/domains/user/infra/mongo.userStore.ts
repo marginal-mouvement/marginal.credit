@@ -1,9 +1,8 @@
-import type {
-  MongoTransaction} from "@marginal-card/backend-framework";
+import type { MongoTransaction } from "@marginal.credit/backend-framework";
 import {
   DispatchingStore,
-  MongoStore
-} from "@marginal-card/backend-framework";
+  MongoStore,
+} from "@marginal.credit/backend-framework";
 import type { Db } from "mongodb";
 
 import { MongoUserSerializer } from "./mongo.user.serializer";

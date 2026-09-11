@@ -6,7 +6,7 @@ import type {
   PayloadOf,
   ResultOf,
   Topics,
-} from "@marginal-card/sdk";
+} from "@marginal.credit/sdk";
 import { streamSSE } from "hono/streaming";
 
 import type { IActor, Router } from "../../core/router/router";

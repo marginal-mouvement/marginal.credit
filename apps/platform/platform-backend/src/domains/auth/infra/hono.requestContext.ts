@@ -1,6 +1,6 @@
 import type { Context } from "hono";
 import { getCookie, setCookie } from "hono/cookie";
-import { KeyId } from "@marginal-card/backend-framework";
+import { KeyId } from "@marginal.credit/backend-framework";
 
 import type { RequestContext } from "../application/requestContext";
 

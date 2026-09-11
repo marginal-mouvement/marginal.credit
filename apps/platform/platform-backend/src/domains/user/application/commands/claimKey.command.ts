@@ -1,10 +1,11 @@
 import {
+  type DatetimeService,
   type KeyId,
   type TransactionPerformer,
   ApplicationError,
   Command,
   CommandHandler,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 
 import type { Email } from "../../domain/email";
 import type { UserStore } from "../user.store";
@@ -30,12 +31,14 @@ export class ClaimKeyCommandHandler extends CommandHandler(ClaimKeyCommand) {
     private readonly userStore: UserStore,
     private readonly keyStore: KeyStore,
     private readonly transactionPerformer: TransactionPerformer,
+    private readonly datetimeService: DatetimeService,
   ) {
     super();
   }
 
   async execute(command: ClaimKeyCommand) {
     const { keyId, name, refererName, email } = command.payload;
+    const now = this.datetimeService.now();
 
     let referrer: User | undefined;
 
@@ -66,9 +69,10 @@ export class ClaimKeyCommandHandler extends CommandHandler(ClaimKeyCommand) {
         referrerId: referrer?.id,
         referrerName: referrer?.name,
         duringShow: key.showId,
+        at: now,
       });
 
-      key.assign(user.id);
+      key.assign(user.id, now);
 
       await this.userStore.save(user, transaction);
       await this.keyStore.save(key, transaction);

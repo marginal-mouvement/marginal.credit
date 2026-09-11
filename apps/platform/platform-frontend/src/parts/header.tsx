@@ -1,4 +1,4 @@
-import { Separator } from "@/components/ui/separator.tsx";
+import { Separator } from "@marginal.credit/ui/separator.tsx";
 
 interface HeaderProps {
   title: string;

@@ -1,5 +1,5 @@
 import { Primitive } from "@ddd-ts/shape";
-import { ApplicationError } from "@marginal-card/backend-framework";
+import { ApplicationError } from "@marginal.credit/backend-framework";
 
 const Grade = {
   Basic: 0,

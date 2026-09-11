@@ -3,7 +3,7 @@ import type {
   AnyContractWithoutAuth,
   PayloadOf,
   ResultOf,
-} from "@marginal-card/sdk";
+} from "@marginal.credit/sdk";
 
 import type { UserId } from "../value";
 

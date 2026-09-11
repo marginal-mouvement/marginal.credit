@@ -1,12 +1,13 @@
 import type {
   DatetimeService,
   TransactionPerformer,
-  UserId} from "@marginal-card/backend-framework";
+  UserId,
+} from "@marginal.credit/backend-framework";
 import {
   ApplicationError,
   Command,
-  CommandHandler
-} from "@marginal-card/backend-framework";
+  CommandHandler,
+} from "@marginal.credit/backend-framework";
 
 import type { Actor } from "../../../auth/domain/actor";
 import { User } from "../../domain/user";

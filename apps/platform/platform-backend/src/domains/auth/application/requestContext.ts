@@ -1,4 +1,4 @@
-import type { KeyId } from "@marginal-card/backend-framework";
+import type { KeyId } from "@marginal.credit/backend-framework";
 
 export interface RequestContext {
   getToken(): string | undefined;

@@ -1,13 +1,17 @@
 import { use, useEffect } from "react";
 import { CircleX, Plus, RotateCcw } from "lucide-react";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@marginal.credit/ui/alert.tsx";
+import { Button } from "@marginal.credit/ui/button.tsx";
+import { Card } from "@marginal.credit/ui/card.tsx";
 
-import { Page } from "@/parts/page.tsx";
-import { ShowContext } from "@/core/show/show.context.tsx";
-import { ShowCard } from "@/core/show/showCard.tsx";
-import { Card } from "@/components/ui/card.tsx";
-import { CreateShowDialog } from "@/core/show/createShow.dialog.tsx";
-import { Button } from "@/components/ui/button.tsx";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert.tsx";
+import { ShowContext } from "../../../core/show/show.context.tsx";
+import { Page } from "../../../parts/page.tsx";
+import { CreateShowDialog } from "../../../core/show/createShow.dialog.tsx";
+import { ShowCard } from "../../../core/show/showCard.tsx";
 
 export const ShowsPage = () => {
   const { shows, fetchShows, createShow, fetchError, retry } = use(ShowContext);

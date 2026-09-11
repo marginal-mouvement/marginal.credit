@@ -1,5 +1,8 @@
-import type { ReaderApi, AnyStationSnapshot } from "@marginal-card/station-sdk";
-import type { ResultOf } from "@marginal-card/sdk";
+import type {
+  ReaderApi,
+  AnyStationSnapshot,
+} from "@marginal.credit/station-sdk";
+import type { ResultOf } from "@marginal.credit/sdk";
 
 export interface Reader {
   id: string;

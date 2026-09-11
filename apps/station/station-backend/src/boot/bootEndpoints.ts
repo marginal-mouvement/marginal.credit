@@ -2,10 +2,10 @@ import { Hono } from "hono";
 import type {
   IntentBus,
   SubscriptionRegistry,
-} from "@marginal-card/backend-framework";
-import { HonoRouter, KeyId, UserId } from "@marginal-card/backend-framework";
-import type { StationTopics } from "@marginal-card/station-sdk";
-import { ReaderApi, SubscriptionApi } from "@marginal-card/station-sdk";
+} from "@marginal.credit/backend-framework";
+import { HonoRouter, KeyId, UserId } from "@marginal.credit/backend-framework";
+import type { StationTopics } from "@marginal.credit/station-sdk";
+import { ReaderApi, SubscriptionApi } from "@marginal.credit/station-sdk";
 
 import type { ReaderManager } from "../domains/reader/infra/readerManager";
 import { ReaderId } from "../domains/reader/domain/readerId";

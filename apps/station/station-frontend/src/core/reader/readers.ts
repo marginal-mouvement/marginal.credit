@@ -1,6 +1,6 @@
-import type { AnyStationSnapshot } from "@marginal-card/station-sdk";
+import type { AnyStationSnapshot } from "@marginal.credit/station-sdk";
 
-import type { ReaderAction, ReaderDict } from "@/core/reader/types.ts";
+import type { ReaderAction, ReaderDict } from "./types.ts";
 
 export class Readers {
   static applyEvent(
@@ -56,17 +56,10 @@ export class Readers {
           },
         };
       }
-      case "NoTagRead":
-        return {
-          ...readers,
-          [event.payload.readerId]: {
-            ...reader,
-            lastEvent: event.name,
-          },
-        };
       case "ReaderNotFound":
       case "ReaderUnknownError":
       case "ReadFailed":
+      case "NoTagRead":
         return readers;
     }
   }

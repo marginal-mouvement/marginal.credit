@@ -1,4 +1,4 @@
-import { InfrastructureError } from "@marginal-card/backend-framework";
+import { InfrastructureError } from "@marginal.credit/backend-framework";
 
 import type { UriPrefix } from "./uriPrefix";
 

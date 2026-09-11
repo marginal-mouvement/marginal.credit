@@ -1,16 +1,14 @@
 import type {
   InMemoryDatabase,
-  InMemoryTransaction} from "@ddd-ts/store-inmemory";
-import {
-  InMemoryStore
+  InMemoryTransaction,
 } from "@ddd-ts/store-inmemory";
-import { DispatchingStore } from "@marginal-card/backend-framework";
+import { InMemoryStore } from "@ddd-ts/store-inmemory";
+import { DispatchingStore } from "@marginal.credit/backend-framework";
 
 import { MongoUserSerializer } from "./mongo.user.serializer";
 
 import type { User } from "../domain/user";
 import type { UserStore } from "../application/user.store";
-
 
 export class InMemoryUserStore
   extends DispatchingStore(InMemoryStore<User>)

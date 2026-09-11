@@ -1,4 +1,4 @@
-import { Command, CommandHandler } from "@marginal-card/backend-framework";
+import { Command, CommandHandler } from "@marginal.credit/backend-framework";
 
 import type { Actor } from "../../../auth/domain/actor";
 import type { ShowStore } from "../show.store";

@@ -1,5 +1,5 @@
 import type { ISerializer } from "@ddd-ts/core";
-import { UserId } from "@marginal-card/backend-framework";
+import { UserId } from "@marginal.credit/backend-framework";
 
 import { Session } from "../domain/session";
 import { SessionId } from "../domain/sessionId";

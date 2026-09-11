@@ -1,5 +1,5 @@
-import type { IntentBus } from "@marginal-card/backend-framework";
-import { ApplicationError, Saga } from "@marginal-card/backend-framework";
+import type { IntentBus } from "@marginal.credit/backend-framework";
+import { ApplicationError, Saga } from "@marginal.credit/backend-framework";
 
 import { CreditUserBalanceCommand } from "./commands/creditUserBalance.command";
 

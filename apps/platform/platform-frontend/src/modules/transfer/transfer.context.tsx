@@ -5,9 +5,9 @@ import {
   useMemo,
   useState,
 } from "react";
-import type { SimpleTransfer } from "@marginal-card/platform-sdk";
+import type { SimpleTransfer } from "@marginal.credit/platform-sdk";
 
-import { platformSDK } from "@/modules/platform/platformSDK.ts";
+import { platformSDK } from "../platform/platformSDK.ts";
 
 interface TransferContext {
   transfers: SimpleTransfer[];

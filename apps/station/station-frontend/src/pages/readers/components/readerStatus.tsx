@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 import { Lock, Nfc } from "lucide-react";
+import { Card } from "@marginal.credit/ui/card.tsx";
+import { Badge } from "@marginal.credit/ui/badge.tsx";
 
-import { Badge } from "@/components/ui/badge.tsx";
-import { Card } from "@/components/ui/card.tsx";
-import { useReader } from "@/core/reader/useReader.ts";
+import { useReader } from "../../../core/reader/useReader.ts";
 
 interface ReaderStatusProps {
   icon: ReactNode;

@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
-
-import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar.tsx";
+import { SidebarInset, SidebarTrigger } from "@marginal.credit/ui/sidebar.tsx";
 
 interface PageProps {
   title: string;

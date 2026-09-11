@@ -1,16 +1,17 @@
 import { useCallback, useEffect, useState } from "react";
-import type { SimpleUser } from "@marginal-card/platform-sdk";
+import type { SimpleUser } from "@marginal.credit/platform-sdk";
 import { RotateCcw } from "lucide-react";
+import { PulseRingIcon } from "@marginal.credit/ui/svg-spinners-pulse-ring.tsx";
+import { Tabs, TabsList, TabsTrigger } from "@marginal.credit/ui/tabs.tsx";
+import { Button } from "@marginal.credit/ui/button.tsx";
+import { Input } from "@marginal.credit/ui/input.tsx";
 import { toast } from "sonner";
 
-import { useReader } from "@/core/reader/useReader.ts";
-import { PulseRingIcon } from "@/components/icons/svg-spinners-pulse-ring.tsx";
-import { ReaderStatus } from "@/pages/readers/components/readerStatus.tsx";
-import { platformSDK } from "@/core/platform/platformSDK.ts";
-import { UserCard } from "@/pages/readers/components/userCard.tsx";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs.tsx";
-import { Input } from "@/components/ui/input.tsx";
-import { Button } from "@/components/ui/button.tsx";
+import { UserCard } from "./userCard.tsx";
+import { ReaderStatus } from "./readerStatus.tsx";
+
+import { platformSDK } from "../../../core/platform/platformSDK.ts";
+import { useReader } from "../../../core/reader/useReader.ts";
 
 interface ReaderReadProps {
   readerId: string;

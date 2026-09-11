@@ -1,7 +1,7 @@
-import { PlatformSDK } from "@marginal-card/platform-sdk";
+import { PlatformSDK } from "@marginal.credit/platform-sdk";
 import { toast } from "sonner";
 
-import { KeyStore } from "@/modules/key/key.store.ts";
+import { KeyStore } from "../key/key.store.ts";
 
 export const platformSDK = new PlatformSDK(
   import.meta.env.VITE_PLATFORM_BASE_URL,

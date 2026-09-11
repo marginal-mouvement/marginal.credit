@@ -1,4 +1,4 @@
-import { type PayloadOf, SDK } from "@marginal-card/sdk";
+import { type PayloadOf, SDK } from "@marginal.credit/sdk";
 
 import { KeyApi } from "./key";
 import { UserApi } from "./user";

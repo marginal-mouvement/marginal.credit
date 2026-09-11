@@ -1,4 +1,4 @@
-import { InfrastructureError } from "@marginal-card/backend-framework";
+import { InfrastructureError } from "@marginal.credit/backend-framework";
 
 export class Type2Tlv {
   static readonly TLV_TERMINATOR = 0xfe;

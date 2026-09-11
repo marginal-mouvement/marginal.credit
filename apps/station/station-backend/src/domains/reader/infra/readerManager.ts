@@ -3,9 +3,12 @@ import type {
   KeyId,
   DatetimeService,
   SubscriptionRegistry,
-} from "@marginal-card/backend-framework";
-import { InfrastructureError, Logger } from "@marginal-card/backend-framework";
-import type { StationTopics } from "@marginal-card/station-sdk";
+} from "@marginal.credit/backend-framework";
+import {
+  InfrastructureError,
+  Logger,
+} from "@marginal.credit/backend-framework";
+import type { StationTopics } from "@marginal.credit/station-sdk";
 
 import type { UriPrefix } from "./utils/uriPrefix";
 import { MarginalisedReader } from "./marginalisedReader";

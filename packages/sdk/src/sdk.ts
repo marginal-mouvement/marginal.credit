@@ -75,12 +75,15 @@ export abstract class SDK {
       ...this.prepareHeaders(),
     };
 
+    const body =
+      contract.method === "POST" ? JSON.stringify(payload ?? {}) : undefined;
+
     const response: OkResponse<ResultOf<T>> | ServerError = await fetch(
       `${this.baseUrl}${contract.path}`,
       {
         method: contract.method,
         headers,
-        body: payload ? JSON.stringify(payload) : undefined,
+        body,
       },
     )
       .then((res) => res.json())

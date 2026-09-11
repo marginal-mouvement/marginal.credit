@@ -1,15 +1,16 @@
 {
-  "name": "@marginal-card/station-sdk",
+  "name": "@marginal.credit/station-sdk",
   "version": "1.0.0",
   "license": "ISC",
   "exports": {
     ".": "./src/index.ts"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "lint": "eslint . ",
+    "format": "prettier . --check"
   },
   "dependencies": {
-    "@marginal-card/sdk": "workspace:*",
-    "zod": "^4.3.6"
+    "@marginal.credit/sdk": "workspace:*",
+    "zod": "catalog:"
   }
 }

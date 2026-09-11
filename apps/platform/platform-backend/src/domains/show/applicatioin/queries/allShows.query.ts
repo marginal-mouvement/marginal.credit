@@ -1,4 +1,4 @@
-import { Query, QueryHandler } from "@marginal-card/backend-framework";
+import { Query, QueryHandler } from "@marginal.credit/backend-framework";
 
 import type { Show } from "../../domain/show";
 import type { Actor } from "../../../auth/domain/actor";

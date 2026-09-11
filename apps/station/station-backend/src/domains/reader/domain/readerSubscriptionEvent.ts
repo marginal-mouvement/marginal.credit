@@ -1,4 +1,4 @@
-import type { AnyStationSnapshot } from "@marginal-card/station-sdk";
+import type { AnyStationSnapshot } from "@marginal.credit/station-sdk";
 
 import type { ReaderId } from "./readerId";
 

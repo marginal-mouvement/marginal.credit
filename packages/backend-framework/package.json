@@ -1,26 +1,27 @@
 {
-  "name": "@marginal-card/backend-framework",
+  "name": "@marginal.credit/backend-framework",
   "version": "1.0.0",
   "license": "ISC",
   "exports": {
     ".": "./src/index.ts"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "lint": "eslint .",
+    "format": "prettier . --check"
   },
   "dependencies": {
-    "@ddd-ts/core": "^0.0.35",
-    "@ddd-ts/shape": "^0.0.35",
+    "@ddd-ts/core": "catalog:",
+    "@ddd-ts/shape": "catalog:",
+    "@marginal.credit/sdk": "workspace:*",
     "crypto": "^1.0.1",
     "dotenv": "^17.3.1",
-    "hono": "^4.12.5",
-    "mongodb": "^7.1.0",
+    "hono": "catalog:",
+    "mongodb": "catalog:",
     "ulid": "^3.0.2",
-    "zod": "^4.3.6",
-    "@marginal-card/sdk": "workspace:*"
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@ddd-ts/types": "^0.0.35",
-    "@marginal-card/sdk": "workspace:*"
+    "@marginal.credit/sdk": "workspace:*"
   }
 }

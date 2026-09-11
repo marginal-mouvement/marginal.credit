@@ -2,12 +2,12 @@ import type {
   DatetimeService,
   UserId,
   TransactionPerformer,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 import {
   ApplicationError,
   Command,
   CommandHandler,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 
 import type { UserStore } from "../user.store";
 import { User } from "../../domain/user";

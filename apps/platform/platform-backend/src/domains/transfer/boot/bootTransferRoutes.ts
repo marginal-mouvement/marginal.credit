@@ -1,8 +1,8 @@
 import type {
   HonoRouter,
   InMemoryIntentBus,
-} from "@marginal-card/backend-framework";
-import { TransferApi } from "@marginal-card/platform-sdk";
+} from "@marginal.credit/backend-framework";
+import { TransferApi } from "@marginal.credit/platform-sdk";
 
 import type { Actor } from "../../auth/domain/actor";
 import { AllMyTransfersQuery } from "../application/queries/allMyTransfers.query";

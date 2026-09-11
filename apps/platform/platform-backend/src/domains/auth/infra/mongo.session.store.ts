@@ -1,4 +1,4 @@
-import { MongoStore } from "@marginal-card/backend-framework";
+import { MongoStore } from "@marginal.credit/backend-framework";
 import type { Db } from "mongodb";
 
 import { MongoSessionSerializer } from "./mongo.session.serializer";

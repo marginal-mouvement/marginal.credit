@@ -1,4 +1,4 @@
-import { Contract } from "@marginal-card/sdk";
+import { Contract } from "@marginal.credit/sdk";
 import { z } from "zod";
 
 import {

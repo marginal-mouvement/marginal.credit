@@ -1,3 +1,3 @@
-import { Id } from "@marginal-card/backend-framework";
+import { Id } from "@marginal.credit/backend-framework";
 
 export class ShowId extends Id("shw") {}

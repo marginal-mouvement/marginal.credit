@@ -6,7 +6,7 @@ import {
   Environment,
   handleError,
   Logger,
-} from "@marginal-card/backend-framework";
+} from "@marginal.credit/backend-framework";
 import { cors } from "hono/cors";
 import { serveStatic } from "@hono/node-server/serve-static";
 

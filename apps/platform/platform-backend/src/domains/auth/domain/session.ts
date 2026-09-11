@@ -1,10 +1,9 @@
 import { EsAggregate, EsEvent, On } from "@ddd-ts/core";
 import { Optional } from "@ddd-ts/shape";
-import { DomainError, UserId } from "@marginal-card/backend-framework";
+import { DomainError, UserId } from "@marginal.credit/backend-framework";
 
 import { SessionId } from "./sessionId";
 import { Permission } from "./permission";
-
 
 export class SessionCreated extends EsEvent("SessionCreated", {
   id: SessionId,

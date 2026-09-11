@@ -7,27 +7,27 @@ import {
   User,
 } from "lucide-react";
 import { useCallback, useContext } from "react";
-
-import { Header } from "@/parts/header.tsx";
-import { Content } from "@/parts/content.tsx";
-import { useUser } from "@/modules/auth/useUser.ts";
+import { Avatar, AvatarFallback } from "@marginal.credit/ui/avatar.tsx";
+import { Card } from "@marginal.credit/ui/card.tsx";
 import {
   Field,
   FieldContent,
   FieldLabel,
   FieldSet,
-} from "@/components/ui/field.tsx";
+} from "@marginal.credit/ui/field.tsx";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/components/ui/input-group.tsx";
-import { ButtonGroup } from "@/components/ui/button-group.tsx";
-import { Button } from "@/components/ui/button.tsx";
-import { Card } from "@/components/ui/card.tsx";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar.tsx";
-import { Badge } from "@/components/ui/badge.tsx";
-import { AuthContext } from "@/modules/auth/auth.context.tsx";
+} from "@marginal.credit/ui/input-group.tsx";
+import { ButtonGroup } from "@marginal.credit/ui/button-group.tsx";
+import { Button } from "@marginal.credit/ui/button.tsx";
+import { Badge } from "@marginal.credit/ui/badge.tsx";
+
+import { Content } from "../../parts/content.tsx";
+import { Header } from "../../parts/header.tsx";
+import { useUser } from "../../modules/auth/useUser.ts";
+import { AuthContext } from "../../modules/auth/auth.context.tsx";
 
 export const ProfilePage = () => {
   const { logout } = useContext(AuthContext);
@@ -91,10 +91,10 @@ export const ProfilePage = () => {
         </Button>
         <Badge variant="outline" asChild>
           <a
-            href="https://github.com/marginal-mouvement/marginal-card"
+            href="https://github.com/marginal-mouvement/marginal.credit"
             target="_blank"
           >
-            <Github /> marginal-card <ArrowUpRightIcon />
+            <Github /> marginal.credit <ArrowUpRightIcon />
           </a>
         </Badge>
       </Content>

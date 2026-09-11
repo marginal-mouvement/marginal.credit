@@ -1,5 +1,5 @@
 /* eslint-disable ts/no-redeclare */
-import { Snapshot } from "@marginal-card/sdk";
+import { Snapshot } from "@marginal.credit/sdk";
 import { z } from "zod";
 
 export const ReaderConnectedSnapshot = Snapshot("ReaderConnected", {

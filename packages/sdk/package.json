@@ -1,14 +1,14 @@
 {
-  "name": "@marginal-card/sdk",
+  "name": "@marginal.credit/sdk",
   "version": "1.0.0",
   "license": "ISC",
   "exports": {
     ".": "./src/index.ts"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "format": "prettier . --check"
   },
   "devDependencies": {
-    "zod": "^4.3.6"
+    "zod": "catalog:"
   }
 }

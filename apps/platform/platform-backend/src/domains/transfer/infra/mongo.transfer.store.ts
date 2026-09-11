@@ -1,5 +1,5 @@
-import type { UserId } from "@marginal-card/backend-framework";
-import { MongoStore } from "@marginal-card/backend-framework";
+import type { UserId } from "@marginal.credit/backend-framework";
+import { MongoStore } from "@marginal.credit/backend-framework";
 import type { Db } from "mongodb";
 
 import { MongoTransferSerializer } from "./mongo.transfer.serializer";

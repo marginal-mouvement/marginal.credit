@@ -1,5 +1,5 @@
 import type { Reader } from "@tockawa/nfc-pcsc";
-import { KeyId } from "@marginal-card/backend-framework";
+import { KeyId } from "@marginal.credit/backend-framework";
 
 import { Buffer } from "node:buffer";
 

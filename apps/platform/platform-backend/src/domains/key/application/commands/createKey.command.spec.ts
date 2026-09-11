@@ -1,5 +1,5 @@
 // import { InMemoryDatabase } from "@ddd-ts/store-inmemory";
-// import { ApplicationError } from "@marginal-card/backend-framework";
+// import { ApplicationError } from "@marginal.credit/backend-framework";
 //
 // import { CreateKeyCommand, CreateKeyCommandHandler } from "./createKey.command";
 //

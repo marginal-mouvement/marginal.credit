@@ -1,10 +1,10 @@
 import { ArrowUpRightIcon } from "lucide-react";
+import { Badge } from "@marginal.credit/ui/badge.tsx";
+import { Card } from "@marginal.credit/ui/card.tsx";
 
-import { useUser } from "@/modules/auth/useUser.ts";
-import { Header } from "@/parts/header.tsx";
-import { Content } from "@/parts/content.tsx";
-import { Card } from "@/components/ui/card.tsx";
-import { Badge } from "@/components/ui/badge.tsx";
+import { Header } from "../../parts/header.tsx";
+import { useUser } from "../../modules/auth/useUser.ts";
+import { Content } from "../../parts/content.tsx";
 
 export const GatePage = () => {
   const user = useUser();

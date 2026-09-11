@@ -1,6 +1,6 @@
 import type { AlgorithmTypes } from "hono/jwt";
 import { sign, verify } from "hono/jwt";
-import { ApplicationError } from "@marginal-card/backend-framework";
+import { ApplicationError } from "@marginal.credit/backend-framework";
 
 import type { TokenParser } from "../application/tokenParser";
 import { SessionId } from "../domain/sessionId";

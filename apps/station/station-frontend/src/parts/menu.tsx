@@ -9,7 +9,6 @@ import {
   Users,
 } from "lucide-react";
 import { Link, useLocation } from "react-router";
-
 import {
   Sidebar,
   SidebarContent,
@@ -21,9 +20,10 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar.tsx";
-import { Spinner } from "@/components/ui/spinner.tsx";
-import { ReaderContext } from "@/core/reader/reader.context.tsx";
+} from "@marginal.credit/ui/sidebar.tsx";
+import { Spinner } from "@marginal.credit/ui/spinner.tsx";
+
+import { ReaderContext } from "../core/reader/reader.context.tsx";
 
 export const Menu = () => {
   const { readerList } = use(ReaderContext);
